@@ -1,0 +1,203 @@
+import pandas as pd
+xl_workbook = pd.ExcelFile("D:\work\projects.xlsx")
+df = xl_workbook.parse("Sheet1")  
+x1 = df['Roll'].tolist() 
+x2 = df['month'].tolist()
+x3 = df['year'].tolist()
+x4 = df['date'].tolist()
+x5 = df['maths'].tolist()
+x6 = df['physics'].tolist()
+x7 = df['chemistry'].tolist()
+x8 = df['totals'].tolist()
+l = len(x1)
+temp=0
+for i in range(0,l,1):
+    for j in range(i+1,l,1):
+        if(x8[i]<x8[j]):
+            temp=x8[i]
+            x8[i]=x8[j]
+            x8[j]=temp
+            temp=x7[i]
+            x7[i]=x7[j]
+            x7[j]=temp
+            temp=x6[i]
+            x6[i]=x6[j]
+            x6[j]=temp
+            temp=x5[j] 
+            x5[i]=x5[j]
+            x5[j]=temp
+            
+          temp=x4[i] 
+            x4[i]=x4[j]
+            x4[j]=temp
+            temp=x3[i]
+            x3[i]=x3[j]
+            x3[j]=temp
+            temp=x2[i]
+            x2[i]=x2[j]
+            x2[j]=temp
+            temp=x1[i]
+            x1[i]=x1[j]
+            x1[j]=temp
+        if(x8[i]==x8[j]):
+            if(x5[i]>x5[j]):
+                temp=x8[i]
+                x8[i]=x8[j]
+                x8[j]=temp
+                temp=x7[i]
+                x7[i]=x7[j]
+                x7[j]=temp
+                temp=x6[i]
+                x6[i]=x6[j]
+                x6[j]=temp
+                temp=x5[j]
+                x5[i]=x5[j]
+                x5[j]=temp
+                temp=x4[i]
+                x4[i]=x4[j]
+                x4[j]=temp
+                temp=x3[i]
+                x3[i]=x3[j]
+                x3[j]=temp
+                temp=x2[i]
+                x2[i]=x2[j]
+                x2[j]=temp
+                temp=x1[i]
+                x1[i]=x1[j]
+                x1[j]=temp
+            if(x5[i]==x5[j]):
+                if(x6[i]>x6[j]):
+                    temp=x8[i]
+                    x8[i]=x8[j]
+                    x8[j]=temp
+                    temp=x7[i]
+                    x7[i]=x7[j]
+                    x7[j]=temp
+                    temp=x6[i]
+                    x6[i]=x6[j]
+                    x6[j]=temp
+                    temp=x5[j]
+                    x5[i]=x5[j]
+                    x5[j]=temp
+                    temp=x4[i]
+                    x4[i]=x4[j]
+                    x4[j]=temp
+                    temp=x3[i]
+                    x3[i]=x3[j]
+                    x3[j]=temp
+                    temp=x2[i]
+                    x2[i]=x2[j]
+                    x2[j]=temp
+                    temp=x1[i]
+                    x1[i]=x1[j]
+                    x1[j]=temp
+                if(x6[i]==x6[j]):
+                    if(x7[i]>x7[j]):
+                        temp=x8[i]
+                        x8[i]=x8[j]
+                        x8[j]=temp
+                        temp=x7[i]
+                        x7[i]=x7[j]
+                        x7[j]=temp
+                        temp=x6[i]
+                        x6[i]=x6[j]
+                        x6[j]=temp
+                        temp=x5[j]
+                        x5[i]=x5[j]
+                        x5[j]=temp
+                        temp=x4[i]
+                        x4[i]=x4[j]
+                        x4[j]=temp
+                        temp=x3[i]
+                        x3[i]=x3[j]
+                        x3[j]=temp
+                        temp=x2[i]
+                        x2[i]=x2[j]
+                        x2[j]=temp
+                        temp=x1[i]
+                        x1[i]=x1[j]
+                        x1[j]=temp
+                    if(x7[i]==x7[j]):
+                        if(x3[i]>x3[j]):
+                            temp=x8[i]
+                            x8[i]=x8[j]
+                          
+                            x8[j]=temp
+                            temp=x7[i]
+                            x7[i]=x7[j]
+                            x7[j]=temp
+                            temp=x6[i]
+                            x6[i]=x6[j]
+                            x6[j]=temp
+                            temp=x5[j]
+                            x5[i]=x5[j]
+                            x5[j]=temp
+                            temp=x4[i]
+                            x4[i]=x4[j]
+                            x4[j]=temp
+                            temp=x3[i]
+                            x3[i]=x3[j]
+                            x3[j]=temp
+                            temp=x2[i]
+                            x2[i]=x2[j]
+                            x2[j]=temp
+                            temp=x1[i]
+                            x1[i]=x1[j]
+                            x1[j]=temp
+                        if(x3[i]==x3[j]):
+                            if(x2[j]<x2[i]):
+                                temp=x8[i]
+                                x8[i]=x8[j]
+                                x8[j]=temp
+                                temp=x7[i]
+                                x7[i]=x7[j]
+                                x7[j]=temp
+                                
+                                temp=x6[i]
+                                x6[i]=x6[j]
+                                x6[j]=temp
+                                temp=x5[j]
+                                x5[i]=x5[j]
+                                x5[j]=temp
+                                temp=x4[i]
+                                x4[i]=x4[j]
+                                x4[j]=temp
+                                temp=x3[i]
+                                x3[i]=x3[j]
+                                x3[j]=temp
+                                temp=x2[i]
+                                x2[i]=x2[j]
+                                x2[j]=temp
+                                temp=x1[i]
+                                x1[i]=x1[j]
+                                x1[j]=temp
+                            if(x2[j]==x2[i]):
+                                if(x4[j]<x4[i]):
+                                    temp=x8[i]
+                                    x8[i]=x8[j]
+                                    x8[j]=temp
+                                    temp=x7[i]
+                                    x7[i]=x7[j]
+                                    x7[j]=temp
+                                    temp=x6[i]
+                                    x6[i]=x6[j]
+                                    x6[j]=temp
+                                    temp=x5[j]
+                                   
+                                    x5[i]=x5[j]
+                                    x5[j]=temp
+                                    temp=x4[i]
+                                    x4[i]=x4[j]
+                                    x4[j]=temp
+                                    temp=x3[i]
+                                    x3[i]=x3[j]
+                                    x3[j]=temp
+                                    temp=x2[i]
+                                    x2[i]=x2[j]
+                                    x2[j]=temp
+                                    temp=x1[i]
+                                    x1[i]=x1[j]
+                                    x1[j]=temp
+print("Roll\t\tyear\tmonth\tdate\tmaths\tphysics\tchemistry\ttotal\trank\n")
+for i in range(0,l):                            
+    print(x1[i],"\t",x3[i],"\t",x2[i],"\t",x4[i],"\t",x5[i],"\t",x6[i],"\t",x7[i],"\t\t",x8[i],"\t",i+1)
